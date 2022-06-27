@@ -34,126 +34,22 @@ def clicked_button():
     yazi = Label(text=cikan_sayi, fg="Black", bg="#8D7A29", font='16')
     yazi.place(x=283, y=50)
 
-    if str(cikan_sayi) == '4':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=20, y=200)
+    sozluk = {
+        25 : [147, 200], 41 : [271, 200], 62 : [397, 200], 11 : [83, 280], 33 : [209, 280], 52 : [335, 280],
+        77 : [459, 280], 82 : [521, 280], 8 : [21, 355], 28 : [147, 355], 47 : [272, 355], 67 : [398, 355],
+        89 : [521, 355], 1 : [17, 527], 20 : [143, 527], 40 : [269, 527], 64 : [395, 527], 71 : [460, 527],
+        10 : [79, 605], 30 : [206, 605], 56 : [332, 605], 79 : [458, 605], 88 : [521, 605], 2 : [521, 605],
+        23 : [142, 680], 46 : [268, 680], 68 : [395, 680], 87 : [520, 680], 4 : [20, 200]
+    }
 
-    if str(cikan_sayi) == '25':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=147, y=200)
 
-    if str(cikan_sayi) == '41':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=271, y=200)
-
-    if str(cikan_sayi) == '62':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=397, y=200)
-
-    if str(cikan_sayi) == '11':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=83, y=280)
-
-    if str(cikan_sayi) == '33':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=209, y=280)
-
-    if str(cikan_sayi) == '52':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=335, y=280)
-
-    if str(cikan_sayi) == '77':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=459, y=280)
-
-    if str(cikan_sayi) == '82':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=521, y=280)
-
-    if str(cikan_sayi) == '8':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=21, y=355)
-
-    if str(cikan_sayi) == '28':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=147, y=355)
-
-    if str(cikan_sayi) == '47':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=272, y=355)
-
-    if str(cikan_sayi) == '67':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=398, y=355)
-
-    if str(cikan_sayi) == '89':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=521, y=355)
-
-    if str(cikan_sayi) == '1':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=17, y=527)
-
-    if str(cikan_sayi) == '20':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=143, y=527)
-
-    if str(cikan_sayi) == '40':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=269, y=527)
-
-    if str(cikan_sayi) == '64':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=395, y=527)
-
-    if str(cikan_sayi) == '71':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=460, y=527)
-
-    if str(cikan_sayi) == '10':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=79, y=605)
-
-    if str(cikan_sayi) == '30':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=206, y=605)
-
-    if str(cikan_sayi) == '56':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=332, y=605)
-
-    if str(cikan_sayi) == '79':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=458, y=605)
-
-    if str(cikan_sayi) == '88':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=521, y=605)
-
-    if str(cikan_sayi) == '2':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=16, y=680)
-
-    if str(cikan_sayi) == '23':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=142, y=680)
-
-    if str(cikan_sayi) == '46':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=268, y=680)
-
-    if str(cikan_sayi) == '68':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=395, y=680)
-
-    if str(cikan_sayi) == '87':
-        puldeneme = Label(window, image=pul, bg='white')
-        puldeneme.place(x=520, y=680)
+    for i in sozluk:
+        if cikan_sayi == i:
+            puldeneme = Label(window, image=pul, bg='white')
+            puldeneme.place(x=int(sozluk[i][0]), y=int(sozluk[i][1]))
 
 
 Button(window, text="Sayi Cek!", font=('Times 15 bold'), command=clicked_button).place(x=240, y=90)
 
 
 window.mainloop()
-
-#tombala kagıdını resim olarak koyup cikan sayıları konum ile yerlestir
